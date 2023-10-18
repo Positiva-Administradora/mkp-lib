@@ -3,7 +3,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button } from 'portal-ui/form/Button'
+import { Button } from '@mkp/ui/form/Button'
 
 const meta: Meta<typeof Button> = {
 	component: Button,

@@ -1,5 +1,5 @@
 {
-  "name": "docs",
+  "name": "@mkp/docs",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -17,12 +17,13 @@
     "@fontsource/material-icons": "^5.0.7",
     "@mui/icons-material": "^5.14.14",
     "@mui/material": "^5.14.14",
-    "config": "*",
     "next": "^13.4.19",
     "polished": "^4.2.2",
-    "portal-ui": "*",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+
+    "@mkp/ui": "*",
+    "@mkp/config": "*"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.19",

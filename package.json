@@ -1,5 +1,4 @@
 {
-  "name": "portal-ui",
   "private": true,
   "scripts": {
     "build": "turbo run build",

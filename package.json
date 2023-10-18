@@ -6,7 +6,8 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
-    "publish": "turbo run build && changeset version && changeset publish"
+    "version": "changeset version",
+    "release": "turbo run build --filter=apps/docs && changeset publish"
   },
   "devDependencies": {
     "eslint": "^8.48.0",

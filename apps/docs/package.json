@@ -17,12 +17,12 @@
     "@fontsource/material-icons": "^5.0.7",
     "@mui/icons-material": "^5.14.14",
     "@mui/material": "^5.14.14",
+    "config": "*",
     "next": "^13.4.19",
     "polished": "^4.2.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "portal-ui": "*",
-    "config": "*"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.19",
@@ -38,7 +38,7 @@
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
     "eslint-plugin-storybook": "^0.6.15",
-    "storybook": "^7.5.0",
+    "storybook": "^7.5.0",    
     "typescript": "^4.5.3"
   }
 }

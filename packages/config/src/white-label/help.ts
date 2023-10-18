@@ -1,21 +1,21 @@
 import { createTheme } from "@mui/material";
 import { darken } from "polished";
-import { defaultTheme } from "../src/themes";
+import { defaultTheme } from "../themes";
 import { buttonVariants } from "../buttonsVariants";
 
 export const paletteColors = {
-	primary: "#7F2566",
-	secondary: "#FF8200",
-	terciary: "#FAC601",
-	background: "#F6EFE6",
-	black: "#152332",
-	neutral: "#F8EFE8",
+	primary: "#D9782D",
+	secondary: "#5AA69D",
+	terciary: "#9A8F65",
+	background: "#E4E4E4",
+	black: "#4F4F4F",
+	neutral: "#E4E4E4",
 	gray: "#868686",
 	red: "#f44336",
 	success: "#4caf50",
 };
 
-export const wizTheme = createTheme(defaultTheme, {
+export const helpTheme = createTheme(defaultTheme, {
 	palette: {
 		primary: {
 			main: paletteColors.primary,
@@ -27,8 +27,8 @@ export const wizTheme = createTheme(defaultTheme, {
 			main: paletteColors.terciary,
 		},
 		background: {
-			main: paletteColors.background,
-			secondary: paletteColors.background,
+			main: "#F4F5F6",
+			secondary: "#FFF",
 		},
 		black: {
 			main: paletteColors.black,
@@ -47,13 +47,13 @@ export const wizTheme = createTheme(defaultTheme, {
 			main: paletteColors.success,
 		},
 		contrastBox: {
-			main: "#F8F7F5",
-			secondary: "#FFF",
-			overLight: "#F6EFE6",
+			main: "#FFF",
+			secondary: "#F5F5F5",
+			overLight: "#F5F5F5",
 			chart: "#eae1d8",
 		},
 		table: {
-			evenLine: "#F8F7F5",
+			evenLine: "#F5F5F5",
 		},
 		title: {
 			kpis: paletteColors.primary,
@@ -63,7 +63,7 @@ export const wizTheme = createTheme(defaultTheme, {
 			table: {
 				primary: paletteColors.primary,
 				secondary: paletteColors.primary,
-				terciary: "#ECDDCF",
+				terciary: "#969798",
 			},
 			circleLine: paletteColors.secondary,
 			line: paletteColors.primary,
@@ -71,8 +71,8 @@ export const wizTheme = createTheme(defaultTheme, {
 	},
 
 	logo: {
-		width: 160,
-		height: 52,
+		width: 132,
+		height: 74,
 	},
 
 	components: {
@@ -80,26 +80,22 @@ export const wizTheme = createTheme(defaultTheme, {
 			styleOverrides: {
 				root: {
 					"& fieldset": {
-						borderColor: "#B9BFC7",
+						borderColor: paletteColors.primary,
 					},
 
 					"&:hover fieldset": {
-						borderColor: "red",
+						borderColor: paletteColors.secondary,
 					},
 
 					"&.Mui-focused fieldset": {
-						borderColor: "red",
+						borderColor: paletteColors.primary,
 					},
+
 					"input.Mui-disabled": {
+						WebkitTextFillColor: paletteColors.secondary,
 						color: paletteColors.secondary,
+						backgroundColor: "#EEE",
 					},
-
-					"&.Mui-disabled": {
-						backgroundColor: "#B9BFC7",
-					},
-
-					backgroundColor: "#FFF",
-					borderRadius: "6px",
 				},
 			},
 		},
@@ -108,17 +104,15 @@ export const wizTheme = createTheme(defaultTheme, {
 			styleOverrides: {
 				root: {
 					".MuiOutlinedInput-input": {
-						color: "#868686",
-
-						"&::placeholder": {
-							color: "#000",
-						},
+						WebkitTextFillColor: paletteColors.secondary,
+						color: paletteColors.secondary,
 					},
-
-					fontSize: 16,
+					fontSize: "0.875rem",
 
 					"&.Mui-disabled": {
+						WebkitTextFillColor: paletteColors.secondary,
 						color: paletteColors.secondary,
+						backgroundColor: "#EEE",
 					},
 
 					input: {
@@ -127,7 +121,7 @@ export const wizTheme = createTheme(defaultTheme, {
 
 					"&.Mui-focused": {
 						input: {
-							color: "#868686",
+							color: paletteColors.secondary,
 						},
 					},
 				},
@@ -139,9 +133,13 @@ export const wizTheme = createTheme(defaultTheme, {
 				root: {
 					color: paletteColors.primary,
 					fontSize: "0.875rem",
-
 					"&.Mui-focused": {
 						color: paletteColors.primary,
+					},
+
+					"&.Mui-disabled": {
+						color: paletteColors.primary,
+						fontWeight: "bold",
 					},
 				},
 			},
@@ -192,13 +190,11 @@ export const wizTheme = createTheme(defaultTheme, {
 						backgroundColor: darken(0.05, paletteColors.primary),
 					},
 				},
-
 				containedSecondary: {
 					"&:hover": {
 						backgroundColor: darken(0.05, paletteColors.secondary),
 					},
 				},
-
 				containedGray: {
 					color: "#FFF",
 
@@ -241,20 +237,12 @@ export const wizTheme = createTheme(defaultTheme, {
 		MuiStep: {
 			styleOverrides: {
 				root: {
+					"& .MuiTypography-root.MuiTypography-caption": {
+						color: "#000000DE",
+					},
 					"&.Mui-completed .MuiTypography-root.MuiTypography-caption": {
 						color: paletteColors.secondary,
 					},
-				},
-			},
-		},
-		MuiDialogTitle: {
-			styleOverrides: {
-				root: {
-					backgroundColor: paletteColors.primary,
-					color: "white",
-					fontWeight: 400,
-					fontSize: 25,
-					textAlign: "center",
 				},
 			},
 		},
@@ -267,19 +255,18 @@ export const wizTheme = createTheme(defaultTheme, {
 
 				root: {
 					"& .MuiSvgIcon-root": {
-						fontSize: 25,
-						color: paletteColors.primary,
+						color: paletteColors.secondary,
 					},
 				},
 				paper: {
 					border: `1px solid ${paletteColors.primary}`,
 
 					"& .MuiAutocomplete-option": {
-						fontSize: "1rem",
+						fontSize: "0.875rem",
+						"&:hover": {
+							backgroundColor: "#E3E4E5",
+						},
 					},
-				},
-				inputRoot: {
-					fontSize: 16,
 				},
 			},
 		},
@@ -296,8 +283,8 @@ export const wizTheme = createTheme(defaultTheme, {
 });
 
 export default {
-	name: "Wiz Mais Você",
-	theme: wizTheme,
-	favicon: "/icons/wiz.png",
+	name: "Help",
+	theme: helpTheme,
+	favicon: "/icons/help.png",
 	link: "https://portal.wizsaude.com.br/",
 };

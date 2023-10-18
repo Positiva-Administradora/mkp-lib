@@ -1,21 +1,21 @@
 import { createTheme } from "@mui/material";
 import { darken } from "polished";
-import { defaultTheme } from "../src/themes";
+import { defaultTheme } from "../themes";
 import { buttonVariants } from "../buttonsVariants";
 
 export const paletteColors = {
-	primary: "#00b2e2",
-	secondary: "#2b328c",
-	terciary: "#1672B7",
-	black: "#50555A",
-	neutral: "#808080",
-	background: "#CECECE",
+	primary: "#7F2566",
+	secondary: "#FF8200",
+	terciary: "#FAC601",
+	background: "#F6EFE6",
+	black: "#152332",
+	neutral: "#F8EFE8",
 	gray: "#868686",
 	red: "#f44336",
 	success: "#4caf50",
 };
 
-export const positivaTheme = createTheme(defaultTheme, {
+export const wizTheme = createTheme(defaultTheme, {
 	palette: {
 		primary: {
 			main: paletteColors.primary,
@@ -28,7 +28,7 @@ export const positivaTheme = createTheme(defaultTheme, {
 		},
 		background: {
 			main: paletteColors.background,
-			secondary: "#FFF",
+			secondary: paletteColors.background,
 		},
 		black: {
 			main: paletteColors.black,
@@ -47,32 +47,32 @@ export const positivaTheme = createTheme(defaultTheme, {
 			main: paletteColors.success,
 		},
 		contrastBox: {
-			main: "#FFF",
-			secondary: "#EAEAEA",
-			overLight: "#F8F7F5",
-			chart: "#E5E5E5",
+			main: "#F8F7F5",
+			secondary: "#FFF",
+			overLight: "#F6EFE6",
+			chart: "#eae1d8",
 		},
 		table: {
-			evenLine: "#EAEAEA",
+			evenLine: "#F8F7F5",
 		},
 		title: {
-			kpis: paletteColors.secondary,
+			kpis: paletteColors.primary,
 		},
 		report: {
-			text: paletteColors.secondary,
+			text: paletteColors.primary,
 			table: {
-				primary: paletteColors.secondary,
-				secondary: "#FFF",
-				terciary: "#969798",
+				primary: paletteColors.primary,
+				secondary: paletteColors.primary,
+				terciary: "#ECDDCF",
 			},
-			circleLine: paletteColors.primary,
-			line: paletteColors.secondary,
+			circleLine: paletteColors.secondary,
+			line: paletteColors.primary,
 		},
 	},
 
 	logo: {
-		width: 130,
-		height: 50,
+		width: 160,
+		height: 52,
 	},
 
 	components: {
@@ -80,22 +80,26 @@ export const positivaTheme = createTheme(defaultTheme, {
 			styleOverrides: {
 				root: {
 					"& fieldset": {
-						borderColor: paletteColors.primary,
+						borderColor: "#B9BFC7",
 					},
 
 					"&:hover fieldset": {
-						borderColor: paletteColors.secondary,
+						borderColor: "red",
 					},
 
 					"&.Mui-focused fieldset": {
-						borderColor: paletteColors.primary,
+						borderColor: "red",
+					},
+					"input.Mui-disabled": {
+						color: paletteColors.secondary,
 					},
 
-					"input.Mui-disabled": {
-						WebkitTextFillColor: paletteColors.secondary,
-						color: paletteColors.secondary,
-						backgroundColor: "#EEE",
+					"&.Mui-disabled": {
+						backgroundColor: "#B9BFC7",
 					},
+
+					backgroundColor: "#FFF",
+					borderRadius: "6px",
 				},
 			},
 		},
@@ -104,15 +108,17 @@ export const positivaTheme = createTheme(defaultTheme, {
 			styleOverrides: {
 				root: {
 					".MuiOutlinedInput-input": {
-						WebkitTextFillColor: paletteColors.secondary,
-						color: paletteColors.secondary,
+						color: "#868686",
+
+						"&::placeholder": {
+							color: "#000",
+						},
 					},
-					fontSize: "0.875rem",
+
+					fontSize: 16,
 
 					"&.Mui-disabled": {
-						WebkitTextFillColor: paletteColors.secondary,
 						color: paletteColors.secondary,
-						backgroundColor: "#EEE",
 					},
 
 					input: {
@@ -121,7 +127,7 @@ export const positivaTheme = createTheme(defaultTheme, {
 
 					"&.Mui-focused": {
 						input: {
-							color: paletteColors.secondary,
+							color: "#868686",
 						},
 					},
 				},
@@ -131,15 +137,11 @@ export const positivaTheme = createTheme(defaultTheme, {
 		MuiInputLabel: {
 			styleOverrides: {
 				root: {
-					color: paletteColors.secondary,
+					color: paletteColors.primary,
 					fontSize: "0.875rem",
-					"&.Mui-focused": {
-						color: paletteColors.secondary,
-					},
 
-					"&.Mui-disabled": {
+					"&.Mui-focused": {
 						color: paletteColors.primary,
-						fontWeight: "bold",
 					},
 				},
 			},
@@ -190,11 +192,13 @@ export const positivaTheme = createTheme(defaultTheme, {
 						backgroundColor: darken(0.05, paletteColors.primary),
 					},
 				},
+
 				containedSecondary: {
 					"&:hover": {
 						backgroundColor: darken(0.05, paletteColors.secondary),
 					},
 				},
+
 				containedGray: {
 					color: "#FFF",
 
@@ -237,12 +241,20 @@ export const positivaTheme = createTheme(defaultTheme, {
 		MuiStep: {
 			styleOverrides: {
 				root: {
-					"& .MuiTypography-root.MuiTypography-caption": {
-						color: "#000000DE",
-					},
 					"&.Mui-completed .MuiTypography-root.MuiTypography-caption": {
 						color: paletteColors.secondary,
 					},
+				},
+			},
+		},
+		MuiDialogTitle: {
+			styleOverrides: {
+				root: {
+					backgroundColor: paletteColors.primary,
+					color: "white",
+					fontWeight: 400,
+					fontSize: 25,
+					textAlign: "center",
 				},
 			},
 		},
@@ -255,18 +267,19 @@ export const positivaTheme = createTheme(defaultTheme, {
 
 				root: {
 					"& .MuiSvgIcon-root": {
-						color: paletteColors.secondary,
+						fontSize: 25,
+						color: paletteColors.primary,
 					},
 				},
 				paper: {
 					border: `1px solid ${paletteColors.primary}`,
 
 					"& .MuiAutocomplete-option": {
-						fontSize: "0.875rem",
-						"&:hover": {
-							backgroundColor: "#E3E4E5",
-						},
+						fontSize: "1rem",
 					},
+				},
+				inputRoot: {
+					fontSize: 16,
 				},
 			},
 		},
@@ -283,8 +296,8 @@ export const positivaTheme = createTheme(defaultTheme, {
 });
 
 export default {
-	name: "Positiva",
-	theme: positivaTheme,
-	favicon: "/icons/positiva.png",
-	link: "https://portal.positiva.com.br/",
+	name: "Wiz Mais Você",
+	theme: wizTheme,
+	favicon: "/icons/wiz.png",
+	link: "https://portal.wizsaude.com.br/",
 };

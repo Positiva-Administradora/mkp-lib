@@ -1,21 +1,21 @@
 import { createTheme } from "@mui/material";
 import { darken } from "polished";
-import { defaultTheme } from "../src/themes";
+import { defaultTheme } from "../themes";
 import { buttonVariants } from "../buttonsVariants";
 
 export const paletteColors = {
-	primary: "#D9782D",
-	secondary: "#5AA69D",
-	terciary: "#9A8F65",
-	background: "#E4E4E4",
+	primary: "#EB145F",
+	secondary: "#F69420",
+	terciary: "#F15440",
+	background: "#F5F5F5",
 	black: "#4F4F4F",
-	neutral: "#E4E4E4",
+	neutral: "#F5F5F5",
 	gray: "#868686",
 	red: "#f44336",
 	success: "#4caf50",
 };
 
-export const helpTheme = createTheme(defaultTheme, {
+export const meProtegeTheme = createTheme(defaultTheme, {
 	palette: {
 		primary: {
 			main: paletteColors.primary,
@@ -27,7 +27,7 @@ export const helpTheme = createTheme(defaultTheme, {
 			main: paletteColors.terciary,
 		},
 		background: {
-			main: "#F4F5F6",
+			main: "#F5F5F5",
 			secondary: "#FFF",
 		},
 		black: {
@@ -48,12 +48,12 @@ export const helpTheme = createTheme(defaultTheme, {
 		},
 		contrastBox: {
 			main: "#FFF",
-			secondary: "#F5F5F5",
-			overLight: "#F5F5F5",
+			secondary: "#E4E4E4",
+			overLight: "#E4E4E4",
 			chart: "#eae1d8",
 		},
 		table: {
-			evenLine: "#F5F5F5",
+			evenLine: "#E4E4E4",
 		},
 		title: {
 			kpis: paletteColors.primary,
@@ -71,8 +71,8 @@ export const helpTheme = createTheme(defaultTheme, {
 	},
 
 	logo: {
-		width: 132,
-		height: 74,
+		width: 145,
+		height: 90,
 	},
 
 	components: {
@@ -283,8 +283,8 @@ export const helpTheme = createTheme(defaultTheme, {
 });
 
 export default {
-	name: "Help",
-	theme: helpTheme,
-	favicon: "/icons/help.png",
+	name: "Me Protege",
+	theme: meProtegeTheme,
+	favicon: "/icons/meprotege.png",
 	link: "https://portal.wizsaude.com.br/",
 };

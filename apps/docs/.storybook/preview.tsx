@@ -3,8 +3,7 @@ import type { Preview } from "@storybook/react";
 
 import { ThemeProvider, CssBaseline } from "@mui/material";
 
-import { getWhiteLabel } from "config"
-import { cairo } from "config/src/fonts";
+import { getWhiteLabel, cairo } from "config"
 
 import '@fontsource/cairo/300.css';
 import '@fontsource/cairo/400.css';

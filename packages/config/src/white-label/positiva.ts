@@ -1,21 +1,21 @@
 import { createTheme } from "@mui/material";
 import { darken } from "polished";
-import { defaultTheme } from "../src/themes";
+import { defaultTheme } from "../themes";
 import { buttonVariants } from "../buttonsVariants";
 
 export const paletteColors = {
-	primary: "#EB145F",
-	secondary: "#F69420",
-	terciary: "#F15440",
-	background: "#F5F5F5",
-	black: "#4F4F4F",
-	neutral: "#F5F5F5",
+	primary: "#00b2e2",
+	secondary: "#2b328c",
+	terciary: "#1672B7",
+	black: "#50555A",
+	neutral: "#808080",
+	background: "#CECECE",
 	gray: "#868686",
 	red: "#f44336",
 	success: "#4caf50",
 };
 
-export const meProtegeTheme = createTheme(defaultTheme, {
+export const positivaTheme = createTheme(defaultTheme, {
 	palette: {
 		primary: {
 			main: paletteColors.primary,
@@ -27,7 +27,7 @@ export const meProtegeTheme = createTheme(defaultTheme, {
 			main: paletteColors.terciary,
 		},
 		background: {
-			main: "#F5F5F5",
+			main: paletteColors.background,
 			secondary: "#FFF",
 		},
 		black: {
@@ -48,31 +48,31 @@ export const meProtegeTheme = createTheme(defaultTheme, {
 		},
 		contrastBox: {
 			main: "#FFF",
-			secondary: "#E4E4E4",
-			overLight: "#E4E4E4",
-			chart: "#eae1d8",
+			secondary: "#EAEAEA",
+			overLight: "#F8F7F5",
+			chart: "#E5E5E5",
 		},
 		table: {
-			evenLine: "#E4E4E4",
+			evenLine: "#EAEAEA",
 		},
 		title: {
-			kpis: paletteColors.primary,
+			kpis: paletteColors.secondary,
 		},
 		report: {
-			text: paletteColors.primary,
+			text: paletteColors.secondary,
 			table: {
-				primary: paletteColors.primary,
-				secondary: paletteColors.primary,
+				primary: paletteColors.secondary,
+				secondary: "#FFF",
 				terciary: "#969798",
 			},
-			circleLine: paletteColors.secondary,
-			line: paletteColors.primary,
+			circleLine: paletteColors.primary,
+			line: paletteColors.secondary,
 		},
 	},
 
 	logo: {
-		width: 145,
-		height: 90,
+		width: 130,
+		height: 50,
 	},
 
 	components: {
@@ -131,10 +131,10 @@ export const meProtegeTheme = createTheme(defaultTheme, {
 		MuiInputLabel: {
 			styleOverrides: {
 				root: {
-					color: paletteColors.primary,
+					color: paletteColors.secondary,
 					fontSize: "0.875rem",
 					"&.Mui-focused": {
-						color: paletteColors.primary,
+						color: paletteColors.secondary,
 					},
 
 					"&.Mui-disabled": {
@@ -283,8 +283,8 @@ export const meProtegeTheme = createTheme(defaultTheme, {
 });
 
 export default {
-	name: "Me Protege",
-	theme: meProtegeTheme,
-	favicon: "/icons/meprotege.png",
-	link: "https://portal.wizsaude.com.br/",
+	name: "Positiva",
+	theme: positivaTheme,
+	favicon: "/icons/positiva.png",
+	link: "https://portal.positiva.com.br/",
 };

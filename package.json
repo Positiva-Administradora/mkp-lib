@@ -1,4 +1,5 @@
 {
+  "name": "portal-ui",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -12,7 +13,6 @@
     "tsconfig": "*",
     "turbo": "latest"
   },
-  "name": "portal-ui",
   "packageManager": "npm@9.8.0",
   "workspaces": [
     "apps/*",

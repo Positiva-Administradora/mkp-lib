@@ -37,6 +37,7 @@ const config: StorybookConfig = {
         prop.parent ? !/node_modules\/(?!@mui)/.test(prop.parent.fileName) : true,
     },
   },
+
 	webpackFinal: async (config, { configType }) => {
     if (!config.resolve) {
       return config;

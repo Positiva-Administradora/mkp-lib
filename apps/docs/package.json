@@ -8,21 +8,22 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "release-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/cairo": "^5.0.12",
     "@fontsource/material-icons": "^5.0.7",
+    "@mkp-lib/config": "*",
+    "@mkp-lib/ui": "*",
     "@mui/icons-material": "^5.14.14",
     "@mui/material": "^5.14.14",
     "next": "^13.4.19",
     "polished": "^4.2.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@mkp-lib/ui": "*",
-    "@mkp-lib/config": "*"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.19",
@@ -33,6 +34,7 @@
     "@storybook/blocks": "^7.5.0",
     "@storybook/nextjs": "^7.5.0",
     "@storybook/react": "^7.5.0",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.2.2",
     "@types/node": "^17.0.12",
     "@types/react": "^18.0.22",

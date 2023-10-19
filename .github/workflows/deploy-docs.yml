@@ -5,6 +5,8 @@ on:
     branches:
       - main
 
+permissions: write-all
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -22,6 +24,7 @@ jobs:
       - run: npm run build
 
       - name: Deploy Storybook
+      
         working-directory: ./apps/docs
         run: npm run release-storybook -- --ci --existing-output-dir=storybook-static
         env:

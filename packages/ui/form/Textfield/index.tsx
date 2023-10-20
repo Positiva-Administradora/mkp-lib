@@ -1,29 +1,12 @@
-import { ComponentProps } from "react";
-
 import {
-	TextField as MuiTextField,
 	Box,
 	CircularProgress,
-	styled,
 	InputLabel,
 	Typography,
 } from "@mui/material";
-
-
-interface TextFieldProps extends ComponentProps<typeof MuiTextField> {
-	isLoading?: boolean;
-	borderless?: boolean;
-	inputLabelSx?: ComponentProps<typeof InputLabel>["sx"];
-}
-
-const uuid = () => {
-	return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
-		const r = (Math.random() * 16) | 0,
-			v = c === "x" ? r : (r & 0x3) | 0x8;
-
-		return v.toString(16);
-	});
-};
+import { uuid } from "../../utils/uuid";
+import { TextFieldProps } from "./types";
+import { StyledTextField } from "./styles";
 
 export const TextField = ({
 	isLoading,
@@ -75,8 +58,3 @@ export const TextField = ({
 	);
 };
 
-const StyledTextField = styled(MuiTextField)<{
-	borderless: boolean;
-}>(({ borderless }) => ({
-	"& fieldset": { border: borderless ? "none" : undefined },
-}));

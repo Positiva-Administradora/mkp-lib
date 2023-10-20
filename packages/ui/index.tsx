@@ -1,3 +1,3 @@
 export * from "./form/Button";
-export * from "./form/Select";
+export * from "./form/Autocomplete";
 export * from "./form/Textfield";

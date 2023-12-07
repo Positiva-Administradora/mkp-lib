@@ -15,6 +15,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/cairo": "^5.0.12",
+    "@fontsource/inter": "^5.0.16",
     "@fontsource/material-icons": "^5.0.7",
     "@mkp-lib/config": "*",
     "@mkp-lib/ui": "*",

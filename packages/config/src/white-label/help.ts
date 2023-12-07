@@ -2,6 +2,7 @@ import { createTheme } from "@mui/material";
 import { darken } from "polished";
 import { defaultTheme } from "../themes";
 import { buttonVariants } from "../buttonsVariants";
+import { cairo } from "../fonts/cairo";
 
 export const paletteColors = {
 	primary: "#D9782D",
@@ -277,6 +278,17 @@ export const helpTheme = createTheme(defaultTheme, {
 					color: paletteColors.red,
 					marginLeft: 0,
 				},
+			},
+		},
+
+		MuiTypography: {
+			styleOverrides: {
+				root: {
+					fontFamily: "inherit",
+				},
+			},
+			defaultProps: {
+				fontFamily: cairo.style.fontFamily,
 			},
 		},
 	},

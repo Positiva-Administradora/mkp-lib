@@ -2,6 +2,7 @@ import { createTheme } from "@mui/material";
 import { darken } from "polished";
 import { defaultTheme } from "../themes";
 import { buttonVariants } from "../buttonsVariants";
+import { inter } from "../fonts/inter";
 
 export const paletteColors = {
 	primary: "#00b2e2",
@@ -277,6 +278,17 @@ export const positivaTheme = createTheme(defaultTheme, {
 					color: paletteColors.red,
 					marginLeft: 0,
 				},
+			},
+		},
+
+		MuiTypography: {
+			styleOverrides: {
+				root: {
+					fontFamily: "inherit",
+				},
+			},
+			defaultProps: {
+				fontFamily: inter.style.fontFamily,
 			},
 		},
 	},

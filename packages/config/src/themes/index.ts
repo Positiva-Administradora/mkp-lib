@@ -1,6 +1,5 @@
 
 import { createTheme } from "@mui/material/styles";
-import { cairo } from "../fonts";
 
 const theme = createTheme();
 
@@ -76,16 +75,6 @@ export const defaultTheme = createTheme(theme, {
 				root: {
 					boxShadow: "0px 3px 26px #9090901F",
 				},
-			},
-		},
-		MuiTypography: {
-			styleOverrides: {
-				root: {
-					fontFamily: "inherit",
-				},
-			},
-			defaultProps: {
-				fontFamily: cairo.style.fontFamily,
 			},
 		},
 
